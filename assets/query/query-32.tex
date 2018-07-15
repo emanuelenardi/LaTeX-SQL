@@ -1,0 +1,7 @@
+\begin{lstlisting}
+SELECT   Dipart
+FROM     Impiegato
+WHERE    Ufficio = '20'
+GROUP BY Dipart
+HAVING   avg(Stipendio) > 25
+\end{lstlisting}

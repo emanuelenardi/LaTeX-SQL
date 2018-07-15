@@ -1,0 +1,9 @@
+\begin{lstlisting}
+SELECT *
+FROM   Persona P
+WHERE  NOT EXISTS (SELECT *
+                   FROM   Persona P1
+                   WHERE  P.Nome = P1.Nome
+                   AND  P.Cognome = P1.Nome
+                   AND  P.CF <> P1.CF)
+\end{lstlisting}

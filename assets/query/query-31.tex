@@ -1,0 +1,8 @@
+\begin{lstlisting}
+SELECT   Dipart, sum(Stipendio)
+FROM     Impiegato
+GROUP BY Dipart
+HAVING   sum(Stipendio) > 100
+\end{lstlisting}
+
+La clausola dettata dall'HAVING è \emph{indipendente} da quella del SELECT, quindi potrei restituire anche un'altra proprietà anche se non avrebbe molto senso.

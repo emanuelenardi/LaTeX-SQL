@@ -1,0 +1,8 @@
+\begin{lstlisting}
+SELECT Nome
+FROM   Impiegato
+UNION ^ALL^
+SELECT Cognome
+FROM   Impiegato
+WHERE  Dipart <> 'Amministrazione'
+\end{lstlisting}

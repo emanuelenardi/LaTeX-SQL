@@ -1,0 +1,6 @@
+\begin{lstlisting}
+SELECT Dipart
+FROM   Impiegato
+WHERE  Stipendio >= all (SELECT Stipendio
+                         FROM   Impiegato)
+\end{lstlisting}

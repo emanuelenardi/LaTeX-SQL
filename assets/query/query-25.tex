@@ -1,0 +1,6 @@
+\begin{lstlisting}
+SELECT max(Stipendio)
+FROM   Impiegato, Dipartimento
+WHERE  Dipartimento.Citta = 'Milano'
+  AND  Dipart = D.Nome -- corrispondenza fra tabelle
+\end{lstlisting}

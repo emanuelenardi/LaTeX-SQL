@@ -1,0 +1,17 @@
+\begin{lstlisting}
+SELECT Stipendio/12 AS StipendioMensile
+FROM   Impiegato
+WHERE  Cognome = 'Bianchi'
+\end{lstlisting}
+
+La query produce la seguente tabella:
+
+\begin{center}
+	\begin{tabular}{@{} l @{}}
+		\toprule
+			StipendioMensile \\
+		\midrule
+			3,00 \\
+		\bottomrule
+	\end{tabular}
+\end{center}

@@ -1,0 +1,8 @@
+\begin{lstlisting}
+SELECT Nome
+FROM   Dipartimento
+EXCEPT
+SELECT Dipart
+FROM   Impiegato
+WHERE  Cognome = 'Rossi'
+\end{lstlisting}

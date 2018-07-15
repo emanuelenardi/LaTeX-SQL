@@ -1,0 +1,22 @@
+\begin{lstlisting}
+SELECT Nome, Cognome
+FROM   Impiegato
+WHERE  Dipart = 'Amministrazione'
+  AND  Dipart = 'Produzione'
+\end{lstlisting}
+
+La query produce la seguente tabella:
+
+\begin{center}
+	\begin{tabular}{@{} l l @{}}
+		\toprule
+			Nome		& Cognome \\
+		\midrule
+			Mario		& Rossi \\
+			Carlo		& Bianchi \\
+			Giovanni	& Verdi \\
+			Paola		& Rosati \\
+			Marco		& Franco \\
+		\bottomrule
+	\end{tabular}
+\end{center}

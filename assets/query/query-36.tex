@@ -1,0 +1,23 @@
+\begin{lstlisting}
+SELECT Nome
+FROM   Impiegato
+EXCEPT (minus)
+SELECT Cognome
+FROM   Impiegato
+\end{lstlisting}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{@{} l @{}}
+		\toprule
+			Nome \\
+		\midrule
+			Mario \\
+			Carlo \\
+			Giovanni \\
+			Lorenzo \\
+			Paola \\
+		 	Marco \\
+		\bottomrule
+	\end{tabular}
+\end{table}

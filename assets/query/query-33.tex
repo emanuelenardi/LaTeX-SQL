@@ -1,0 +1,39 @@
+\begin{lstlisting}
+SELECT   Nome
+FROM     Impiegato
+@UNION@
+SELECT   Cognome
+FROM     Impiegato
+\end{lstlisting}
+
+% \begin{tikzpicture}[fill=green!30]
+% 	\begin{scope}
+% 		\fill \firstcircle \secondcircle;
+% 	\end{scope}
+% \draw \firstcircle node [text=black, left] {$Nome$};
+% \draw \secondcircle node [text=black, right] {$Cognome$};
+% \end{tikzpicture}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{@{} l @{}}
+		\toprule
+			Nome \\
+		\midrule
+			Mario \\
+			Carlo \\
+			Giovanni \\
+			Franco \\
+			Lorenzo \\
+			Paola \\
+			Marco \\
+		\midrule
+			Rossi \\
+			Bianchi \\
+			Verdi \\
+			Neri \\
+			Gialli \\
+			Rosato \\
+		\bottomrule
+	\end{tabular}
+\end{table}

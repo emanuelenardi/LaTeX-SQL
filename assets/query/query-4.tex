@@ -1,0 +1,21 @@
+\begin{lstlisting}
+SELECT	Impiegato.Nome, Impiegato.Cognome, Dipartimento.Citta
+FROM	Impiegato, Dipartimento
+WHERE	Impiegato.Dipart = Dipartimento.Nome
+\end{lstlisting}
+
+La query produce la seguente tabella:
+
+\begin{center}
+	\begin{tabular}{@{} l l l @{}}
+		\toprule
+			Impiegato.Nome	& Impiegato.Cognome & Dipartimento.Citta \\
+		\midrule
+			Mario			& Rossi				& Milano \\
+			\dots			& \dots				& \dots \\
+			Marco			& Franco			& Torino \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\'E necessario specificare il nome della tabella quando le tabelle presenti nella clausola \texttt{FROM} posseggono più attributi con lo stesso nome. Qualora non vi sia possibilità di ambiguità è possibile specificare l'attributo senza dichiarare la tabella di appartenenza.

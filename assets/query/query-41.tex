@@ -1,0 +1,16 @@
+\begin{lstlisting}
+SELECT Nome
+FROM   Dipartimento
+WHERE  Nome <> all (SELECT Dipart
+                    FROM   Impiegato
+                    WHERE  Cognome = 'Rossi')
+\end{lstlisting}
+
+Simboli di appartenenza/non appartenenza rispetto ad un insieme:
+
+\begin{itemize}
+	\item \textbf{= any \(\Leftrightarrow\) in}
+	\item \textbf{<> all \(\Leftrightarrow\) not in}
+\end{itemize}
+
+Interrogazioni che fanno uso degli operatori max e min possono essere rappresentate senza l'uso degli operatori stessi.

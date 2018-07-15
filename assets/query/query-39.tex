@@ -1,0 +1,7 @@
+\begin{lstlisting}
+SELECT Nome
+FROM   Impiegato
+WHERE  Nome = any (SELECT Nome
+                   FROM   Impiegato
+                   WHERE  Dipart = 'Produzione')
+\end{lstlisting}

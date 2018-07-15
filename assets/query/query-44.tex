@@ -1,0 +1,11 @@
+\begin{lstlisting}
+SELECT *
+FROM   Persona P
+WHERE  EXISTS (SELECT *
+               FROM   Persona P1
+			   WHERE  P.Nome = P1.Nome
+			     AND  P.Cognome = P1.Nome
+				 AND  P.CF <> P1.CF)
+\end{lstlisting}
+
+Per ogni chiamata nidificata devi controllare il valore della tabella superiore.

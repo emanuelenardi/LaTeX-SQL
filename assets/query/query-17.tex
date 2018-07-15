@@ -1,0 +1,7 @@
+\begin{lstlisting}
+SELECT I1.Cognome, I1.Nome
+FROM   Impiegato I1, Impiegato I2
+WHERE  I1.Cognome = I2.Cognome
+  AND  I1.Nome <> I2.Cognome
+  AND  I2.Dipart = 'Produzione'
+\end{lstlisting}

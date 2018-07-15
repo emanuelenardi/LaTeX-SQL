@@ -1,0 +1,39 @@
+\geometry {
+	a4paper,
+	top = 3cm,
+	bottom = 3cm,
+	left = 2cm,
+	right = 2cm,
+}
+
+\lstdefinestyle{SQL}{
+	language = {SQL},
+	basicstyle = \footnotesize\ttfamily,
+	commentstyle = \color{ashgrey},
+	keywordstyle = \color{black}\bfseries,
+	moredelim=**[is][\btHL]{^}{^},
+	moredelim=**[is][{\btHL[fill=green!30]}]{@}{@},
+	breakatwhitespace = false,
+	breaklines = true,
+	escapeinside = {(*@}{@*)},
+	morekeywords = {},
+	tabsize = 4,
+	frame = single,
+	captionpos = b,
+	aboveskip = 3mm,
+	belowskip = 3mm,
+}
+
+\lstset{
+	inputencoding = utf8/latin1,
+	extendedchars = false,
+	language = SQL,
+	style = SQL
+}
+
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\renewcommand\labelitemi{--}
+
+\def\firstcircle{(210:1.75cm) circle (2cm)}
+\def\secondcircle{(330:1.75cm) circle (2cm)}
+\renewcommand{\arraystretch}{1.2}

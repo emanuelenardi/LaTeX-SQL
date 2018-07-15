@@ -1,0 +1,27 @@
+\begin{lstlisting}
+SELECT Nome
+FROM   Impiegato
+@INTERSECT@
+SELECT Cognome
+FROM   Impiegato
+\end{lstlisting}
+
+% \begin{tikzpicture}[fill = green!30]
+% 	\begin{scope}[even odd rule] % first circle without the second
+% 		\clip \secondcircle (-4,-4) rectangle (4,4);
+% 	\fill \firstcircle;
+% 	\end{scope}
+% 	\draw \firstcircle node [text=black, left] {$Nome$};
+% 	\draw \secondcircle node [text=black, right] {$Cognome$};
+% \end{tikzpicture}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{@{} l @{}}
+		\toprule
+			Nome \\
+		\midrule
+		 	Franco \\
+		\bottomrule
+	\end{tabular}
+\end{table}

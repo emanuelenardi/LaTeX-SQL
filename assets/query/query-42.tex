@@ -1,0 +1,6 @@
+\begin{lstlisting}
+SELECT Dipart
+FROM   Impiegato
+WHERE  Stipendio = any (SELECT max(Stipendio)
+                        FROM   Impiegato)
+\end{lstlisting}

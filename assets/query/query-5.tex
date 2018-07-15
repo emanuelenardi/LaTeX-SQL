@@ -1,0 +1,13 @@
+\begin{lstlisting}
+SELECT I.Nome, Cognome, D.Citta
+FROM   Impiegato AS I, Dipartimento AS D
+WHERE  Dipart = D.Nome -- non presentano ambiguita'
+\end{lstlisting}
+
+Utilizzando gli alias è possibile fare accesso più volte alla stessa tabella, come avviene nel calcolo relazionale. Tutte le volte che si introduce un alias per una tabella si dichiara in effetti una variabile che rappresenta le righe della tabella di cui è alias.
+
+\medskip
+Quando una tabella una sola volta in un interrogazione, non c'è differenza tra l'interpretare l'alias come uno pseudonimo o come una nuova variabile.
+
+\medskip
+Quando una tabella compare invece più volte, è necessario considerare l'alias come una nuova variabile.

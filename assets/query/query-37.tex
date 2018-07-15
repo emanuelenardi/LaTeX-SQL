@@ -1,0 +1,9 @@
+\begin{lstlisting}
+SELECT *
+FROM   Impiegato
+WHERE  Dipart ^= any^ (SELECT Nome
+                     FROM   Dipartimento
+                     WHERE  Citta = 'Firenze')
+\end{lstlisting}
+
+L'interrogazione seleziona le righe di \texttt{Impiegato} per cui il valore dell'attributo \texttt{Dipart} è uguale ad almeno uno dei valori dell'attributo Nome delle righe di \texttt{Dipartimento}.

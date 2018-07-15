@@ -1,0 +1,203 @@
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+\input{./assets/settings/set_pdf}
+% \input{./assets/settings/preamble}
+\input{preamble}
+\input{mystyle}
+
+\input{./assets/settings/specific-settings}
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+\begin{document}
+
+% ---------------------------------------------------------------------------- %
+
+	\input{initial_page}
+	\afterpage{\blankpage}
+	\clearpage
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+	\input{./assets/other/intro}
+	\input{./assets/other/self-intro}
+	\afterpage{\blankpage}
+	\clearpage
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+\begin{center}
+	\section*{Tabelle}
+\end{center}
+
+\input{./assets/query/tabelle}
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+\newpage
+\section*{Interrogazioni semplici}
+
+\begin{enumerate}
+	\item Estrarre lo stipendio degli impiegati di cognome "Rossi".
+	\input{./assets/query/query-1}
+
+	\item Estrarre tutte le informazioni relative agli impiegati di cognome "Rossi".
+	\input{./assets/query/query-2}
+
+	\item Estrarre lo stipendio mensile dell'impiegato che ha cognome "Bianchi".
+	\input{./assets/query/query-3}
+
+	\item Estrarre il nome degli impiegati e le citta in cui lavorano.
+	\input{./assets/query/query-4}
+
+	\item L'interpretazione precedente può essere espressa facendo uso degli \emph{alias} per la tabella allo scopo di abbreviare i riferimenti a esse.
+	\input{./assets/query/query-5}
+
+	\item Estrarre il nome e il cognome degli impiegati che lavorano nell'ufficio 20 del dipartimento Amministrazione.
+	\input{./assets/query/query-6}
+
+	\item Estrarre i nomi e i cognomi degli impiegati che lavorano nel dipartimento Amministrazione \textbf{o} nel dipartimento Produzione.
+	\input{./assets/query/query-7}
+
+	\item Estrarre i nomi propri degli impiegati di cognome "Rossi" che lavorano nei dipartimenti Amministrazione \textbf{e} Produzione.
+	\input{./assets/query/query-8}
+
+	\item Estrarre gli impiegati che hanno un cognome che ha una "o" in seconda posizione e finisce per "i".
+	\input{./assets/query/query-9}
+
+	\item Estrarre le città delle persone il cui cognome è "Rossi" presentando eventualmente più volte lo stesso valore di città.
+	\input{./assets/query/query-10}
+
+	\item Estrarre le città delle persone con cognome "Rossi", facendo comparire ogni città al più una volta.
+	\input{./assets/query/query-11}
+
+% ---------------------------------------------------------------------------- %
+
+\setcounter{enumi}{16}
+	\item Estrare tutti gli impiegati che hanno lo stesso cognome (ma diverso nome) di impiegati del dipartimento Produzione.
+	\input{./assets/query/query-17}
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+\newpage
+\subsection*{Operatori Aggregati}
+
+\setcounter{enumi}{19}
+	\item Estrarre il no. di impiegati del dipartimento Produzione.
+	\input{./assets/query/query-20}
+
+	\item Estrarre il no. di diversi valori dell'attributo Stipendio fra tutte le righe di impiegato.
+	\input{./assets/query/query-21}
+
+	\item Estrarre il no. di righe che possiedono un valore non nulla per l'attributo Nome.
+	\input{./assets/query/query-22}
+
+	\item Estrarre la somma degli stipendi del dipartimento Amministrazione.
+	\input{./assets/query/query-23}
+
+	\item Estrarre gli stipendi minimo, massimo e medio fra quelli di tutti gli impiegati.
+	\input{./assets/query/query-24}
+
+	\item Estarre il massimo stipendio tra quelli degli impiegati che lavorano in un dipartimento con sede a Milano.
+	\input{./assets/query/query-25}
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+\newpage
+\subsection*{Interrogazioni con raggruppamento}
+
+La sintassi SQL non ammette che nella stessa clausola \sql{SELECT} compaiano funzioni aggregate espressioni al livello di riga, a meno che non si faccia uso della \sql{GROUP BY}.
+
+\setcounter{enumi}{26}
+	\item Estrarre la somma degli stipendi {\btHL di tutti gli impiegati \textbf{dello stesso dipartimento}}
+	\input{./assets/query/query-27}
+
+\setcounter{enumi}{30}
+	\item Estrarre i dipartimenti che spendono più di 10 in Stipendi
+	\input{./assets/query/query-31}
+
+
+	\item Estrarre i dipartimenti per cui la media degli stipendi degli impiegati che lavorano nell'ufficio 20 è superiore a 25.
+	\input{./assets/query/query-32}
+
+% ---------------------------------------------------------------------------- %
+
+\subsection*{Interrogazioni di tipo insiemistico}
+
+\begin{itemize}
+	\item \texttt{union}
+	\item \texttt{intersect}
+	\item \texttt{except} (chiamato anche \texttt{minus})
+\end{itemize}
+
+Tutte le interrogazioni scritte con questi due costrutti possono essere riscritte tramite interrogazioni nidificate.
+
+	\item Estrarre i nomi e i cognomi dagli impiegati.
+	\input{./assets/query/query-33}
+
+	\item Estrarre i nomi e i cognomi di tutti gli impiegati, eccetto quelli appartenenti al dipartimento Amministrazione, {\btHL mantenendo i duplicati}.
+	\input{./assets/query/query-34}
+
+	\item Estrarre i cognomi di impiegati che sono anche nomi.
+	\input{./assets/query/query-35}
+
+	\item Estrarre i nomi degli impiegati che non sono cognomi di qualche impiegato.
+	\input{./assets/query/query-36}
+
+% ---------------------------------------------------------------------------- %
+
+\subsection*{Interrogazioni nidificate}
+
+	\item Estrarre gli impiegati che lavorano in dipartimenti situati a Firenze.
+	\input{./assets/query/query-37}
+
+	\item Consideriamo un'interrogazione che permetta di trovare li impiegati che hanno lo stesso nome di un impiegato del Dipartimento Produzione \dots
+	\input{./assets/query/query-38}
+
+	\item \dots con operazioni insiemistiche
+	\input{./assets/query/query-39}
+
+	\item Estrarre i nomi dei dipartimenti in cui non lavorano persone di cognome "Rossi" \dots
+	\input{./assets/query/query-40}
+
+	\item \dots con operazioni insiemistiche
+	\input{./assets/query/query-41}
+
+	\item Estrarre il dipartimento dell'impiegato che guadagna lo stipendio massimo usando l'operatore \texttt{max} \dots
+	\input{./assets/query/query-42}
+
+	\item \dots usando solo un'interrogazione nidificata
+	\input{./assets/query/query-43}
+
+	\item Estrarre le persone che \textbf{hanno} degli omonimi (stesso nome e cognome ma CF diverso) \dots
+	\input{./assets/query/query-44}
+
+	\item \dots senza query nidificata
+	\input{./assets/query/query-45}
+
+	\item Estrarre le persone che \textbf{non hanno} degli omonimi.
+	\input{./assets/query/query-46}
+
+\end{enumerate}
+
+% ---------------------------------------------------------------------------- %
+
+	\newpage
+	\input{./assets/other/outro}
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+
+\end{document}
+
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
+% ---------------------------------------------------------------------------- %
