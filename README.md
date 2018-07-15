@@ -17,7 +17,7 @@ Permetti di mantenere vivo questo progetto!
 
 Non verrà mostrato l'importo versato, potrai farlo anche in forma anonima :blush:
 
-[Dispensa Database](paypal.me/pools/c/869BPHKuyY)
+[Dispensa Database](https://www.paypal.com/pools/c/869BPHKuyY)
 
 Grazie per il tuo supporto!
 
