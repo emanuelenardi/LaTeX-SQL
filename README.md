@@ -1,4 +1,4 @@
-# LaTeX-SML
+# Esercizi di Database
 
 Collezione di esercizi di Database.
 
